@@ -20,7 +20,7 @@ namespace NTier101_Live
         {
             dataAdapter = new SqlDataAdapter();
             
-            Connection = new SqlConnection(@"Data Source=EGITMEN\PC;Initial Catalog=NTier101DB;Integrated Security=True;TrustServerCertificate=True;");
+            Connection = new SqlConnection(@"Data Source=EGITMEN;Initial Catalog=NTier101DB;Integrated Security=True;TrustServerCertificate=True;");
         }
 
         // VT ye bağlanmak için
