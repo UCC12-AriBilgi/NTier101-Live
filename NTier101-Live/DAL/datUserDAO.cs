@@ -137,6 +137,17 @@ namespace NTier101_Live.DAL
 
         }
 
+        // Kullanıcı silme
+        public bool deleteUser(int UserID)
+        {
+            string query;
+
+            query = "DELETE datUser WHERE UserID=" + UserID.ToString();
+
+            return DBOperation.executeDeleteQuery(query); // işi yapan kısım
+
+        }
+
 
 
 
