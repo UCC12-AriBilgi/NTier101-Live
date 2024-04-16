@@ -27,7 +27,7 @@ namespace NTier101_Live.DAL
         // Bir kullanıcının çeşitli bilgilerinin search edileceği kısım
         // Burası bir Login ekranından kullanıcı var mı / yok mu kontrolu için kullanılabilir
 
-        public DataTable searchUserIDPassw(string userName, string userPassw)
+        public DataTable searchUserNamePassw(string userName, string userPassw)
         {
             // Parametrik yapı
             string Query = string.Format("SELECT * FROM datUser WHERE UserName=@UserName AND UserPassw=@UserPassw");
