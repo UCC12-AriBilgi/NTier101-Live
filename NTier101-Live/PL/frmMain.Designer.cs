@@ -32,6 +32,7 @@
             this.programToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btonExit = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,11 +69,24 @@
             this.çıkışToolStripMenuItem.Text = "Çıkış";
             this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click);
             // 
+            // btonExit
+            // 
+            this.btonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btonExit.Location = new System.Drawing.Point(571, 415);
+            this.btonExit.Name = "btonExit";
+            this.btonExit.Size = new System.Drawing.Size(75, 23);
+            this.btonExit.TabIndex = 1;
+            this.btonExit.Text = "Çıkış";
+            this.btonExit.UseVisualStyleBackColor = true;
+            this.btonExit.Click += new System.EventHandler(this.btonExit_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 450);
+            this.ControlBox = false;
+            this.Controls.Add(this.btonExit);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
@@ -91,5 +105,6 @@
         private System.Windows.Forms.ToolStripMenuItem programToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
+        private System.Windows.Forms.Button btonExit;
     }
 }

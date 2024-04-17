@@ -30,5 +30,10 @@ namespace NTier101_Live.PL
 
             frmUser.ShowDialog();
         }
+
+        private void btonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
