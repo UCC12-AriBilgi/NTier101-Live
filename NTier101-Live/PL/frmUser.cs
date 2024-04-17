@@ -98,7 +98,9 @@ namespace NTier101_Live.PL
                     break;
 
                 case "D":
+                    datUser=datUserBLL.deleteUser(UserID);
 
+                    MessageBox.Show("Silme işleminiz başarılıdır");
 
                     break;
 
@@ -154,6 +156,10 @@ namespace NTier101_Live.PL
 
         private void btonDelete_Click(object sender, EventArgs e)
         {
+            Mode = "D"; // Delete Mode
+            UserID = Convert.ToInt32(dgrdUsers.CurrentRow.Cells[0].Value);
+
+            IUD();
 
         }
 
