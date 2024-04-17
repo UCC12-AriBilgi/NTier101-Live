@@ -21,5 +21,14 @@ namespace NTier101_Live.PL
         {
             Application.Exit();
         }
+
+        private void kToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUser frmUser = new frmUser();
+
+            frmUser.Text = "Kullanıcı Bilgileri";
+
+            frmUser.ShowDialog();
+        }
     }
 }

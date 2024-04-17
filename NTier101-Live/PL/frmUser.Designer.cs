@@ -55,7 +55,7 @@
             this.dgrdUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrdUsers.Location = new System.Drawing.Point(13, 13);
             this.dgrdUsers.Name = "dgrdUsers";
-            this.dgrdUsers.Size = new System.Drawing.Size(341, 150);
+            this.dgrdUsers.Size = new System.Drawing.Size(651, 150);
             this.dgrdUsers.TabIndex = 0;
             // 
             // btonNew
@@ -66,6 +66,7 @@
             this.btonNew.TabIndex = 1;
             this.btonNew.Text = "Yeni";
             this.btonNew.UseVisualStyleBackColor = true;
+            this.btonNew.Click += new System.EventHandler(this.btonNew_Click);
             // 
             // btonUpdate
             // 
@@ -75,6 +76,7 @@
             this.btonUpdate.TabIndex = 2;
             this.btonUpdate.Text = "Update";
             this.btonUpdate.UseVisualStyleBackColor = true;
+            this.btonUpdate.Click += new System.EventHandler(this.btonUpdate_Click);
             // 
             // btonDelete
             // 
@@ -84,6 +86,7 @@
             this.btonDelete.TabIndex = 3;
             this.btonDelete.Text = "Delete";
             this.btonDelete.UseVisualStyleBackColor = true;
+            this.btonDelete.Click += new System.EventHandler(this.btonDelete_Click);
             // 
             // groupBox1
             // 
@@ -213,12 +216,13 @@
             this.btonSave.TabIndex = 17;
             this.btonSave.Text = "Kaydet";
             this.btonSave.UseVisualStyleBackColor = true;
+            this.btonSave.Click += new System.EventHandler(this.btonSave_Click);
             // 
             // frmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 450);
+            this.ClientSize = new System.Drawing.Size(688, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btonDelete);
             this.Controls.Add(this.btonUpdate);

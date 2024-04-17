@@ -1,4 +1,5 @@
 ﻿using NTier101_Live.BLL;
+using NTier101_Live.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -73,9 +74,75 @@ namespace NTier101_Live.PL
             dgrdUsers.DataSource = bindingSource;
         }
 
+        public void IUD()
+        {
+            // Insert Update Delete işlemlerini halledecek metot
 
+            datUser datUser = new datUser();
+
+            switch (Mode)
+            {
+                case "I":
+
+                    datUser = datUserBLL.insertUser(tboxUserName.Text, tboxUserPassw.Text, tboxAd.Text, tboxSoyad.Text, tboxTCKimlik.Text, Convert.ToInt32(tboxMudurlukID.Text));
+
+                    MessageBox.Show("Yeni kayıt işlemiz başarılı");
+
+                    break;
+
+                case "U":
+
+                    break;
+
+                case "D":
+
+
+                    break;
+
+
+
+
+
+                default:
+                    break;
+            }
+
+            FormInit();
+
+            ShowRecords();
+
+        }
 
         #endregion
+
+        #region Button Events
+        
+        private void btonNew_Click(object sender, EventArgs e)
+        {
+            Mode = "I";
+
+            groupBox1.Enabled = true;
+
+            tboxUserName.Focus();
+        }
+
+        private void btonUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btonDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btonSave_Click(object sender, EventArgs e)
+        {
+            IUD();
+        }
+
+        #endregion
+
 
     }
 }

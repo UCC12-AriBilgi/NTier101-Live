@@ -59,6 +59,7 @@
             this.kToolStripMenuItem.Name = "kToolStripMenuItem";
             this.kToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kToolStripMenuItem.Text = "Users";
+            this.kToolStripMenuItem.Click += new System.EventHandler(this.kToolStripMenuItem_Click);
             // 
             // çıkışToolStripMenuItem
             // 
