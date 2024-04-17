@@ -38,7 +38,15 @@ namespace NTier101_Live.PL
             }
             else
             {
-                MessageBox.Show("Doğru giriş yaptınız... ");
+                this.Hide();
+
+                frmMain frmMain = new frmMain();
+
+                frmMain.Text = "Hoşgeldiniz sayın " + datUser.Ad + " " + datUser.Soyad;
+
+                frmMain.ShowDialog();
+
+
             }
 
 

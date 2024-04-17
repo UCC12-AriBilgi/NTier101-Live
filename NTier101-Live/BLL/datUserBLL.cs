@@ -58,6 +58,8 @@ namespace NTier101_Live.BLL
             {
                 datUser.UserName = row["UserName"].ToString();
                 datUser.UserPassw = row["UserPassw"].ToString();
+                datUser.Ad= row["Ad"].ToString();
+                datUser.Soyad = row["Soyad"].ToString();
             }
 
             return datUser;
