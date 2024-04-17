@@ -46,6 +46,7 @@
             this.tboxTCKimlik = new System.Windows.Forms.TextBox();
             this.tboxMudurlukID = new System.Windows.Forms.TextBox();
             this.btonSave = new System.Windows.Forms.Button();
+            this.btonClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgrdUsers)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -218,11 +219,23 @@
             this.btonSave.UseVisualStyleBackColor = true;
             this.btonSave.Click += new System.EventHandler(this.btonSave_Click);
             // 
+            // btonClose
+            // 
+            this.btonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btonClose.Location = new System.Drawing.Point(601, 415);
+            this.btonClose.Name = "btonClose";
+            this.btonClose.Size = new System.Drawing.Size(75, 23);
+            this.btonClose.TabIndex = 5;
+            this.btonClose.Text = "Kapat";
+            this.btonClose.UseVisualStyleBackColor = true;
+            this.btonClose.Click += new System.EventHandler(this.btonClose_Click);
+            // 
             // frmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 450);
+            this.Controls.Add(this.btonClose);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btonDelete);
             this.Controls.Add(this.btonUpdate);
@@ -259,5 +272,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btonClose;
     }
 }

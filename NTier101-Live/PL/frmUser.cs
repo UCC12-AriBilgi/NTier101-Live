@@ -91,6 +91,9 @@ namespace NTier101_Live.PL
                     break;
 
                 case "U":
+                    datUser = datUserBLL.updateUser(UserID, tboxUserName.Text, tboxUserPassw.Text, tboxAd.Text, tboxSoyad.Text, tboxTCKimlik.Text, Convert.ToInt32(tboxMudurlukID.Text));
+
+                    MessageBox.Show("Güncelleme işleminiz başarılıdır.");
 
                     break;
 
@@ -98,10 +101,6 @@ namespace NTier101_Live.PL
 
 
                     break;
-
-
-
-
 
                 default:
                     break;
@@ -113,13 +112,35 @@ namespace NTier101_Live.PL
 
         }
 
+        public void FillComponents()
+        {
+            Mode = "U"; // Update Mode
+
+            groupBox1.Enabled = true;
+
+            UserID = Convert.ToInt32(dgrdUsers.CurrentRow.Cells[0].Value);
+
+            datUser datUser = new datUser();
+
+            datUser= datUserBLL.getUser(UserID);
+
+            tboxUserName.Text = datUser.UserName;
+            tboxUserPassw.Text=datUser.UserPassw;
+            tboxAd.Text= datUser.Ad;
+            tboxSoyad.Text= datUser.Soyad;
+            tboxTCKimlik.Text= datUser.TCKimlik;
+            tboxMudurlukID.Text=datUser.MudurlukID.ToString();
+
+
+        }
+
         #endregion
 
         #region Button Events
         
         private void btonNew_Click(object sender, EventArgs e)
         {
-            Mode = "I";
+            Mode = "I"; // Insert Mode
 
             groupBox1.Enabled = true;
 
@@ -128,7 +149,7 @@ namespace NTier101_Live.PL
 
         private void btonUpdate_Click(object sender, EventArgs e)
         {
-
+            FillComponents();
         }
 
         private void btonDelete_Click(object sender, EventArgs e)
@@ -141,6 +162,10 @@ namespace NTier101_Live.PL
             IUD();
         }
 
+        private void btonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         #endregion
 
 

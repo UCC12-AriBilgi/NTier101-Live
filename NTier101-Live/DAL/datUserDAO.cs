@@ -123,6 +123,8 @@ namespace NTier101_Live.DAL
             sqlParameters[4] = new SqlParameter("TCKimlik", SqlDbType.NVarChar);
             sqlParameters[5] = new SqlParameter("MudurlukID", SqlDbType.TinyInt);
 
+            sqlParameters[6] = new SqlParameter("UserID", SqlDbType.TinyInt);
+
             // içini doldurma
 
             sqlParameters[0].Value = UserName;
